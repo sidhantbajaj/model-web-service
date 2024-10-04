@@ -78,12 +78,8 @@ class PredictionResults:
         model = self.load_model()
         prediction = model.predict(df)
 
-        print(df)  # Print the input DataFrame for debugging.
-
         # Prepare the result dictionary with the rounded prediction.
         result_dict = {"prediction": round(prediction.tolist()[0], 2)}
-
-        print(result_dict)  # Print the result for debugging.
 
         return JSONResponse(result_dict)  # Return the prediction result as JSON.
 

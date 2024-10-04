@@ -3,6 +3,7 @@ import requests
 from datetime import datetime, date
 import json
 import altair as alt
+from constants import HOST_URL, FORECAST_API_ENDPOINT
 
 class ForecastResponse:
     def __init__(self, date: datetime):
@@ -37,8 +38,8 @@ class ForecastResponse:
 
     def get_response(self):
         # Make an API call to get sales data for the specified date.
-        date = self.date 
-        api_url = "http://172.17.0.2:8000/sales/national/"  # API endpoint
+        date = self.date
+        api_url = f"{HOST_URL}{FORECAST_API_ENDPOINT}" # API url with backend endpoint
         return requests.get(f"{api_url}?date={date}")  # Return the API response
 
     def final_response(self):

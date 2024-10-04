@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 from datetime import datetime, date
 import json
+from constants import HOST_URL, PREDICT_API_ENDPOINT
 
 class PredictionResponse:
     def __init__(self, date: datetime, store_id: str, item_id: str):
@@ -18,7 +19,7 @@ class PredictionResponse:
     def get_response(self):
         # Make an API call to retrieve sales prediction for the specified date, store, and item.
         date = self.date  # Get the formatted date
-        api_url = "http://172.17.0.2:8000/sales/stores/items/"  # API endpoint
+        api_url = f"{HOST_URL}{PREDICT_API_ENDPOINT}" # API url with backend endpoint
         return requests.get(f"{api_url}?date={date}&store_id={self.store_id}&item_id={self.item_id}")  # Return the API response
     
     def final_response(self):

@@ -1,0 +1,2 @@
+Backend url - https://sales-revenue-backend-latest.onrender.com
+Web service with frontend url - https://sales-revenue-app.onrender.com

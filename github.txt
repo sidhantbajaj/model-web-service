@@ -1,0 +1,1 @@
+Repository containing both frontend and backend: https://github.com/sidhantbajaj/model-web-service
