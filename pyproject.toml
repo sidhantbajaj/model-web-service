@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "model-web-service"
+version = "0.1.0"
+description = ""
+authors = ["Sidhant Bajaj"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.4"
+pandas = "2.2.2"
+scikit-learn = "1.5.1"
+fastapi = "0.111.0"
+uvicorn = "0.30.1"
+joblib = "1.4.2"
+datetime = "^5.5"
+prophet = "1.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
